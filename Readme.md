@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Irina Sadovskaya](https://up.htmlacademy.ru/adaptive/21/user/1084415).
-* Наставник: `Неизвестно`.
+* Наставник: [Victoria Nikitina](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
