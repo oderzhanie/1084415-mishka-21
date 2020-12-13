@@ -1,0 +1,93 @@
+html {
+  // height: 100%;
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 24px;
+}
+
+body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
+  width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #444444;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+
+  border: 2px solid #444444;
+  background-color: transparent;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.outline {
+  // outline: 2px solid blue;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.button-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.main-title {
+  font-weight: bold;
+  /*Можно ли тут условиями медиа-запросы пропсиать? Чтобы заголовок второго уровня был нужных размеров для моб/планшета/десктопа*/
+  font-size: 27px;
+  line-height: 30px;
+}
+
+.level-2-title {
+  font-weight: bold;
+  /*Можно ли тут условиями медиа-запросы пропсиать? Чтобы заголовок второго уровня был нужных размеров для моб/планшета/десктопа*/
+  font-size: 25px;
+  line-height: 30px;
+}

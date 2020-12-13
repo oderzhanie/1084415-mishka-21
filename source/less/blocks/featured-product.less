@@ -1,0 +1,134 @@
+.featured-product {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 34px 30px 0;
+  background-color: white;
+  box-sizing: border-box;
+  position: relative;
+  .outline();
+}
+
+.featured-product::after {
+  content: "";
+  position: relative;
+  display: block;
+  left: -30px;
+  bottom: -3px;
+  width: 320px;
+  height: 6px;
+  background-image: url("../../img/featured-product/zigzag-line-desktop.svg");
+}
+
+.featured-product__wrapper {
+  width: 260px;
+  text-align: left;
+}
+
+.featured-product__title {
+  .level-2-title();
+  margin: 0;
+}
+
+.featured-product__subtitle {
+  color: @seafoam-blue;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 20px;
+  margin-top: 8px;
+}
+
+.featured-product__description {
+  .list-reset();
+  .outline();
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "a a"
+    "b c"
+    "d e"
+    "f k";
+
+
+  color: #444444;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.featured-product__descriptor {
+  margin: 0;
+  width: 260px;
+  height: 39px;
+
+  font-size: 15px;
+  line-height: 39px;
+
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.featured-product__descriptor--value-1 {
+  grid-area: a;
+  height: min-content;
+  margin-top: 18px;
+  margin-bottom: 28px;
+  border-bottom: none;
+  line-height: 24px;
+}
+
+.featured-product__descriptor--value-2 {
+  grid-area: b;
+  align-self: start;
+  width: 97px;
+}
+
+.featured-product__descriptor--value-3 {
+  grid-area: c;
+  align-self: start;
+  width: 163px;
+}
+
+.featured-product__descriptor--value-4 {
+  grid-area: d;
+  align-self: start;
+  width: 97px;
+}
+
+.featured-product__descriptor--value-5 {
+  grid-area: e;
+  align-self: start;
+  width: 163px;
+}
+
+.featured-product__descriptor--value-6 {
+  grid-area: f;
+  align-self: start;
+  width: 97px;
+  margin-bottom: 28px;
+}
+
+.featured-product__descriptor--value-7 {
+  grid-area: k;
+  align-self: start;
+  width: 163px;
+  margin-bottom: 28px;
+}
+
+.featured-product__price {
+  margin-top: 26px;
+  margin-bottom: 25px;
+
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #444444;
+  text-align: center;
+}
+
+.featured-product__order {
+  width: 260px;
+  height: 52px;
+  margin-bottom: 36px;
+  padding: 12px 0;
+  text-align: center;
+}
