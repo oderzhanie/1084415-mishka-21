@@ -1,0 +1,83 @@
+.products {
+  margin: 0 auto;
+  width: 320px;
+  min-height: 568px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("../../img/products/hero-mobile-1.png");
+  background-repeat: no-repeat;
+  background-position: start;
+
+  .outline();
+}
+
+.products__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 568px;
+  margin: 0 auto;
+
+  .outline();
+}
+
+.products__title {
+  width: 260px;
+  height: 89px;
+  margin: 77px auto 0;
+
+  .main-title();
+
+  text-align: center;
+
+  .outline();
+}
+
+.products__list {
+  list-style-type: none;
+  margin: auto 0 0;
+  padding-inline-start: 0;
+}
+
+.products__item {
+  width: 320px;
+  height: 103px;
+}
+
+.products__item--interior {
+  background-color: @seafoam-blue;
+  background-image: url("../../img/products/interior.svg.svg");
+  background-size: 40px 62px;
+  background-position: 250px 25px;
+  background-repeat: no-repeat;
+}
+
+.products__item--toys {
+  background-color: @mishka-color;
+  background-image: url("../../img/products/toy-svg.svg");
+  background-size: 60px 60px;
+  background-position: 240px 25px;
+  background-repeat: no-repeat;
+}
+
+.products__link {
+  box-sizing: border-box;
+
+  text-decoration: none;
+  display: block;
+  padding: 25px;
+  width: 320px;
+  height: 103px;
+}
+
+.products__text {
+  width: 130px;
+  height: 48px;
+
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+}

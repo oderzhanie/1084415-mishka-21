@@ -43,13 +43,15 @@
     </header>
 
     <main class="page-form">
+      <h1 class="visually-hidden">Форма для заказа товара</h1>
+
       <form class="form" method="POST" action="https://echo.htmlacademy.ru">
         <div class="form__wrapper">
           <h2 class="form__title">Вязание на заказ</h2>
         </div>
         <p class="form__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
-        <fieldset class="form__fieldset fieldset--type">
+        <fieldset class="form__fieldset form__fieldset--type">
           <legend class="form__subtitle">Тип</legend>
           <p>
             <label for="type-1">
@@ -65,7 +67,7 @@
           </p>
         </fieldset>
 
-        <fieldset class="form__fieldset fieldset--colors">
+        <fieldset class="form__fieldset form__fieldset--colors">
           <legend class="form__subtitle">Цвет</legend>
           <p>
             <label for="color-1">
@@ -105,7 +107,7 @@
           </p>
         </fieldset>
 
-        <fieldset class="form__fieldset fieldset--username">
+        <fieldset class="form__fieldset form__fieldset--username">
           <legend class="form__subtitle">ФИО</legend>
           <p>
             <label for="first-name">
@@ -127,21 +129,21 @@
           </p>
         </fieldset>
 
-        <fieldset class="form__fieldset fieldset--phone">
+        <fieldset class="form__fieldset form__fieldset--phone">
           <legend class="form__subtitle">ТЕЛ</legend>
           <p>
             <input type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
           </p>
         </fieldset>
 
-        <fieldset class="form__fieldset fieldset--email">
+        <fieldset class="form__fieldset form__fieldset--email">
           <legend class="form__subtitle">E-MAIL</legend>
           <p>
             <input type="email" name="email" id="email" placeholder="Ваш Email*" required>
           </p>
         </fieldset>
 
-        <fieldset class="form__fieldset fieldset--requirements">
+        <fieldset class="form__fieldset form__fieldset--requirements">
           <legend class="form__subtitle">ДОП</legend>
           <p>
             <textarea placeholder="Опишите все ваши пожелания к заказу" id="requirements" cols="30" rows="10"></textarea>
