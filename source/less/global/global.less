@@ -1,18 +1,17 @@
 html {
-  // height: 100%;
   font-size: 17px;
   font-family: "Open Sans", sans-serif;
   line-height: 24px;
 }
 
 body {
+  min-width: 320px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-
-  width: 320px;
-  min-height: 100%;
   margin: 0 auto;
+
+  min-height: 100%;
   background-color: #ffffff;
 }
 
@@ -37,6 +36,7 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 
   border: 2px solid #444444;
   background-color: transparent;
@@ -48,7 +48,7 @@ table {
 }
 
 .outline {
-  // outline: 2px solid blue;
+  outline: 2px solid blue;
 }
 
 .visually-hidden {
