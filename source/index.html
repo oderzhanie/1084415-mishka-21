@@ -12,32 +12,32 @@
         <img class="page-header__logo-image" src="img/page-header/mishka-logo-mobile.svg.svg" width="86" height="35" alt="Магазин Мишка">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
+        <button class="main-nav__toggle main-nav__toggle--open"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper visually-hidden">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a >Главная</a>
+            <li class="site-list__item site-list__item--active visually-hidden">
+              <a class="site-list__link" href="#">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            </li>
+            <li class="site-list__item visually-hidden">
+              <a class="site-list__link" href="#">Новые поступления</a>
+            </li>
+            <li class="site-list__item visually-hidden">
+              <a class="site-list__link" href="#">Распродажа</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Новые поступления</a>
+              <a class="site-list__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Распродажа</a>
+              <a class="site-list__link" href="#">Поиск по сайту</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="#">Корзина<span>: пока пуста</span></a>
             </li>
-            <li class="site-list__item">
-              <a href="#">Поиск по сайту</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Корзина<span>: пока пуста</span></a>
-            </li>
-            <li class="site-list__item">
-              <a href="#"><span>Бесплатная доставка по России</span></a>
+            <li class="site-list__item visually-hidden">
+              <a class="site-list__link" href="#"><span>Бесплатная доставка по России</span></a>
             </li>
           </ul>
         </div>
@@ -49,7 +49,7 @@
 
       <section class="products">
         <div class="products__wrapper">
-          <h2 class="products__title">Милые штуки ручной работы для дома</h2>
+          <h2 class="products__title">Милые штуки ручной<br> работы для дома</h2>
           <ul class="products__list">
             <li class="products__item products__item--interior">
               <a href="#" class="products__link">
@@ -81,7 +81,7 @@
 
           <img class="featured-product__image" src="img/featured-product/triple-set-mobile-1.png" width="260" height="315" alt="Вязаные корзинки трех размеров">
           <p class="featured-product__price">Цена: 990 руб.</p>
-          <a href="#" class="featured-product__order button">Заказать</a>
+          <a href="./form.html" class="featured-product__order button">Заказать</a>
         </div>
       </section>
 
@@ -96,7 +96,7 @@
           </ul>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--handmade"><span class="advantages__text">Связано вручную <br>с любовью и умилением</span></li>
-            <li class="advantages__item advantages__item--support"><span class="advantages__text">Поддержка отечественного <br>производителя</span>я</li>
+            <li class="advantages__item advantages__item--support"><span class="advantages__text">Поддержка отечественного <br>производителя</span></li>
             <li class="advantages__item advantages__item--presentable"><span class="advantages__text">Поставляется <br>в подарочной упаковке</span></li>
           </ul>
         </div>
@@ -132,8 +132,8 @@
               <img class="map__pin" src="img/contacts/map-pin.svg.svg" width="67" height="100" alt="Мы на карте">
             </article>
 
-            <article class="contact-us">
-              <a href="#" class="contact-us__message button">Напишите нам</a>
+            <article>
+              <a href="#" class="contact-info__message button">Напишите нам</a>
             </article>
           </div>
         </section>
@@ -162,5 +162,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
