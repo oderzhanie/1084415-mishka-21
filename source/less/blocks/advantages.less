@@ -8,25 +8,54 @@
   margin: 0 20px;
   padding-top: 31px;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 51px 100px 0;
+  }
 }
 
 .advantages__title {
   .level-2-title();
   margin: 0 0 28px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .advantages__list {
   .list-reset();
   .outline();
 
-  display: flex;
-  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f";
+  }
 }
 
 .advantages__item {
   display: flex;
   flex-direction: column;
-  height: 105px;
+  min-height: 105px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 
   .outline();
 }
@@ -35,6 +64,11 @@
   margin-top: auto;
   line-height: 20px;
   font-weight: bold;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .advantages__item--ecology {
@@ -42,6 +76,10 @@
   background-size: 33px 38px;
   background-repeat: no-repeat;
   background-position: 10px 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: a;
+  }
 }
 
 .advantages__item--price {
@@ -49,6 +87,10 @@
   background-size: 47px 27px;
   background-repeat: no-repeat;
   background-position: 10px 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: c;
+  }
 }
 
 .advantages__item--likable {
@@ -56,6 +98,10 @@
   background-size: 34px 27px;
   background-repeat: no-repeat;
   background-position: 10px 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: e;
+  }
 }
 
 .advantages__item--handmade {
@@ -63,6 +109,10 @@
   background-size: 35px 34px;
   background-repeat: no-repeat;
   background-position: 10px 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: b;
+  }
 }
 
 .advantages__item--support {
@@ -70,6 +120,10 @@
   background-size: 55px 23px;
   background-repeat: no-repeat;
   background-position: 10px 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: d;
+  }
 }
 
 .advantages__item--presentable {
@@ -77,4 +131,8 @@
   background-size: 33px 32px;
   background-repeat: no-repeat;
   background-position: 10px 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: f;
+  }
 }

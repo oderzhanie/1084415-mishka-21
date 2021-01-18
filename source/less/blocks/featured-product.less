@@ -6,6 +6,11 @@
   box-sizing: border-box;
   position: relative;
   .outline();
+
+  @media (min-width: @desktop-width) {
+    margin-top: 54px;
+    padding: 0 50px;
+  }
 }
 
 .featured-product::after {
@@ -15,18 +20,70 @@
   left: 0;
   bottom: -3px;
   height: 6px;
-  background-image: url("../../img/featured-product/zigzag-line-desktop.svg");
+  background-image: url("../../img/featured-product/zigzag-line-mobile.svg");
+
+  @media (min-width: @tablet-width) {
+    height: 17px;
+    background-image: url("../../img/featured-product/zigzag-line-tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 23px;
+    background-image: url("../../img/featured-product/zigzag-line-desktop.svg.svg");
+  }
 }
 
 .featured-product__wrapper {
   margin: 0 20px;
   padding-top: 34px;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e d"
+      "f d";
+
+    padding: 40px 52px 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 40px 0 52px;
+
+    grid-template-columns: 15% 35% 50%;
+    grid-template-areas:
+      "a b c"
+      "a d c"
+      "a e c"
+      "a f c";
+  }
 }
 
 .featured-product__title {
   .level-2-title();
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-area: a;
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 40px;
+    margin-right: -120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: b;
+    margin-top: 30px;
+    font-size: 53px;
+    line-height: 57px;
+    min-width: max-content;
+    // max-width: 500px; // Не получается ограничить максимальную ширину надписи
+    z-index: 10;
+  }
 }
 
 .featured-product__subtitle {
@@ -35,6 +92,20 @@
   font-size: 17px;
   line-height: 20px;
   margin-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    grid-area: b;
+    text-align: center;
+    display: inline-block;
+    width: 100px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: a;
+    margin-left: 0;
+    margin-top: 35px;
+  }
 }
 
 .featured-product__description {
@@ -54,6 +125,16 @@
   font-size: 15px;
   line-height: 24px;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    grid-area: c;
+    width: 80%;
+    margin-top: -10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: d;
+  }
 }
 
 .featured-product__descriptor {
@@ -74,6 +155,12 @@
   margin-bottom: 28px;
   border-bottom: none;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .featured-product__descriptor--value-2 {
@@ -112,6 +199,14 @@
   width: 100%;
   display: block;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    grid-area: d;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: c;
+  }
 }
 
 .featured-product__price {
@@ -123,6 +218,22 @@
   line-height: 24px;
   color: #444444;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    grid-area: e;
+    width: 80%;
+    margin-top: 57px;
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 27px;
+  }
+
+  .outline();
 }
 
 .featured-product__order {
@@ -131,4 +242,14 @@
   margin: 0 auto 36px;
   padding: 12px 0;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    grid-area: f;
+    width: 80%;
+    margin: 33px auto -23px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto auto 0 0;
+  }
 }
