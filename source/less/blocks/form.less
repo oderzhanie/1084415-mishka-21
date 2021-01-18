@@ -10,11 +10,40 @@
   box-sizing: border-box;
   text-align: center;
   background-color: @bg-grey;
+
+  @media (min-width: @tablet-width) {
+    min-height: 226px;
+    margin-top: -80px;
+    border-top: 1px solid @borders-gray;
+    padding-bottom: 0;
+    margin-bottom: 54px;
+
+    &::after {
+      content: "";
+      position: relative;
+      display: block;
+      left: 0;
+      bottom: -40px; // Почему здесь пришлось задавать отрицательную величину, а ноль не сработал?
+      height: 24px;
+      background-image: url("../../img/form/zigzag-fill-tablet.svg");
+    }
+  }
+
   .outline();
 }
 
 .form__title {
   .main-title();
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .form__intro {
@@ -26,6 +55,12 @@
   font-size: 13px;
   line-height: 24px;
   color: #444444;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .form__fieldset {
@@ -34,10 +69,27 @@
   padding-top: 20px;
   border: none;
   border-top: 1px solid @aquamarin;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    // display: grid;
+    // grid-template-columns: 30% 70%;
+    // grid-template-areas: "a b";
+    display: flex;
+  }
+
   .outline();
 }
 
-.form__fieldset label {
+.form__inputs-wrapper {
+  @media (min-width: @tablet-width) {
+    grid-area: b;
+    display: inline-block;
+    .outline();
+  }
+}
+
+.form__inputs-wrapper label {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -61,15 +113,19 @@
   line-height: 17px;
   color: @aquamarin;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    grid-area: a;
+  }
 }
 
-.form__fieldset--type input {
+.form__inputs-wrapper--type input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 
-.form__fieldset--type label::before {
+.form__inputs-wrapper--type label::before {
   content: "";
   position: absolute;
   width: 42px;
@@ -82,7 +138,7 @@
   background-position: center;
 }
 
-.form__fieldset--type input:checked + label::before {
+.form__inputs-wrapper--type input:checked + label::before {
   background-image: url("../../img/form/Radio_active.svg");
 }
 
