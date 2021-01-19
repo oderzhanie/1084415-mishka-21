@@ -67,15 +67,11 @@
   padding: 0;
   padding-top: 20px;
   border: none;
-  border-top: 1px solid @aquamarin;
 
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 20px 50px;
     border: none;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    grid-template-areas: "a b";
   }
 
   .outline();
@@ -89,32 +85,72 @@
   }
 }
 
+.form__fieldset--phone,
+.form__fieldset--email {
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.form__fieldset ::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: lightgray;
+  text-overflow: ellipsis;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+    line-height: 19px;
+  }
+}
+
 .form__subtitle {
+  display: inline-block;
+  min-width: 63px;
+
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 30px;
+
+
   font-size: 17px;
   font-weight: bold;
   line-height: 17px;
   color: @aquamarin;
   background-color: #ffffff;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80%; // Как сделать, чтобы линия всегда заканчивалась в одном месте?
+    height: 1px;
+
+    left: 84px;
+    top: 22px;
+    background: @aquamarin;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 20px 10px;
+
+    &::after {
+      width: 0;
+      height: 0;
+    }
   }
 
   .outline();
 }
 
 .form__inputs-wrapper {
+  position: relative;
+
   @media (min-width: @tablet-width) {
-    display: flex;
-
-    &--type {
-      flex-direction: column;
-      background-color: red;
-    }
+    display: grid;
+    width: 100%;
   }
-
   .outline();
 }
 
@@ -122,7 +158,7 @@
   position: relative;
   display: block;
   box-sizing: border-box;
-  height: 42px;
+  min-height: 42px;
   cursor: pointer;
 
   padding: 12px 65px;
@@ -134,167 +170,318 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 12px 0 0 65px;
-
+    padding: 15px 0 0 80px;
+    min-height: 52px;
 
     font-size: 19px;
     line-height: 19px;
   }
 }
 
-.form__inputs-wrapper--type input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
+.form__inputs-wrapper--type {
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  label::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 42px;
+
+    left: 10px;
+    bottom: 1px;
+    background-image: url("../../img/form/Radio.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  input:checked + label::before {
+    background-image: url("../../img/form/Radio_active.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+      "a b"
+      "a c";
+
+    h2 {
+      grid-area: a;
+      width: 168px;
+    }
+
+    p {
+      margin-top: 19px;
+      margin-bottom: 19px;
+    }
+
+    p:first-of-type {
+      grid-area: b;
+    }
+
+    p:nth-of-type(2) {
+      grid-area: c;
+    }
+
+    label::before {
+      width: 52px;
+      height: 52px;
+      background-image: url("../../img/form/Radio-tablet.svg");
+    }
+
+    input:checked + label::before {
+      background-image: url("../../img/form/Radio-tablet_active.svg");
+    }
+  }
 }
 
-.form__inputs-wrapper--type label::before {
-  content: "";
-  position: absolute;
-  width: 42px;
-  min-height: 42px;
+.form__inputs-wrapper--colors {
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
 
-  left: 10px;
-  bottom: 1px;
-  background-image: url("../../img/form/Radio.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  label::before {
+    content: "";
+    position: absolute;
+    width: 42px;
+    min-height: 42px;
+
+    left: 10px;
+    bottom: 1px;
+    background-image: url("../../img/form/Checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  input:checked + label::before {
+    background-image: url("../../img/form/Checkbox_active.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas:
+      "a b c"
+      "a d e"
+      "a f k";
+
+    h2 {
+      grid-area: a;
+      width: 168px;
+      background-color: @bg-grey;
+    }
+
+    p {
+      margin-top: 19px;
+      margin-bottom: 19px;
+    }
+
+    label::before {
+      width: 52px;
+      height: 52px;
+      background-image: url("../../img/form/Checkbox-tablet.svg");
+    }
+
+    input:checked + label::before {
+      background-image: url("../../img/form/Checkbox-tablet_active.svg");
+    }
+  }
 }
 
-.form__inputs-wrapper--type input:checked + label::before {
-  background-image: url("../../img/form/Radio_active.svg");
-}
-
-.form__fieldset--colors input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-.form__fieldset--colors label::before {
-  content: "";
-  position: absolute;
-  width: 42px;
-  min-height: 42px;
-
-  left: 10px;
-  bottom: 1px;
-  background-image: url("../../img/form/Checkbox.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.form__fieldset--colors input:checked + label::before {
-  background-image: url("../../img/form/Checkbox_active.svg");
-}
-
-.form__fieldset--username {
+.form__inputs-wrapper--username {
   padding-top: 0;
+
+  label {
+    padding: 0;
+    margin: 0;
+    margin-top: 22px;
+    height: 20px;
+  }
+
+  p {
+    width: inherit;
+    padding-left: 10px;
+  }
+
+  input {
+    display: block;
+    padding: 0;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #444444;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+      "a b"
+      "a c"
+      "a d";
+
+    h2 {
+      grid-area: a;
+      width: 168px;
+    }
+
+    p {
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    label {
+      margin-right: 25px;
+      margin-top: 33px;
+      font-size: 19px;
+    }
+
+    input {
+      margin-top: 27px;
+    }
+  }
 }
 
-.form__fieldset--username label {
-  padding: 0;
-  margin: 0;
-  margin-top: 22px;
-  height: 20px;
-}
-
-.form__fieldset--username p,
-.form__fieldset--phone p,
-.form__fieldset--email p {
-  width: inherit;
-  padding-left: 10px;
-}
-
-.form__fieldset--username input {
-  display: block;
-  padding: 0;
-  height: 35px;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #444444;
-}
-
-.form__fieldset ::placeholder {
-  font-size: 17px;
-  line-height: 18px;
-  color: lightgray;
-  text-overflow: ellipsis;
-}
-
-.form__fieldset--phone,
-.form__fieldset--email,
-.form__fieldset--requirements {
+.form__inputs-wrapper--phone,
+.form__inputs-wrapper--email {
   margin-top: 35px;
+
+  p {
+    width: inherit;
+    padding-left: 10px;
+  }
+
+  input {
+    position: relative;
+    padding: 0;
+    margin-top: 20px;
+    height: 35px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #444444;
+    background-color: @bg-grey;
+
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "a b";
+
+    h2 {
+      grid-area: a;
+      width: 168px;
+      background-color: @bg-grey;
+    }
+
+    p {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
 
-.form__fieldset--phone input,
-.form__fieldset--email input {
-  position: relative;
-  padding: 0;
-  height: 35px;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #444444;
-
-  font-family: inherit;
-  font-size: inherit;
+.form__inputs-wrapper--email {
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
 }
 
-.form__fieldset--phone input::after { // Не показывает иконку
+.form__inputs-wrapper--phone::after {
   content: "";
   position: absolute;
   width: 25px;
-  min-height: 24px;
+  height: 24px;
 
-  left: 90%;
-  bottom: 1px;
+  right: 3%;
+  bottom: 7px;
   background-image: url("../../img/form/phone.svg.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    right: 2%;
+    bottom: 53px;
+  }
 }
 
-.form__fieldset--email input::after { // Не показывает иконку
+.form__inputs-wrapper--email::after {
   content: "";
   position: absolute;
   width: 32px;
   min-height: 21px;
 
-  left: 90%;
-  bottom: 1px;
+  right: 3%;
+  bottom: 7px;
   background-image: url("../../img/form/mail.svg.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: @tablet-width) {
+    right: 2%;
+    bottom: 53px;
+  }
 }
 
-.form__fieldset--requirements textarea {
-  display: block;
-  box-sizing: border-box;
-  height: 180px;
-  width: 100%;
-  padding: 17px;
-  resize: none;
 
-  font-family: inherit;
-  font-size: inherit;
-  border: 2px solid #444444;
-}
+.form__inputs-wrapper--requirements {
+  margin-top: 35px;
 
-.form__legend {
-  font-size: 14px;
-  line-height: 16px;
-}
+  textarea {
+    display: block;
+    box-sizing: border-box;
+    height: 180px;
+    width: 100%;
+    padding: 17px;
+    resize: none;
 
-.form__legend--bottom {
-  display: block;
-  margin-top: 17px;
-  margin-bottom: 30px;
-}
+    font-family: inherit;
+    font-size: inherit;
+    border: 2px solid #444444;
+  }
 
-.form__submit {
-  width: 100%;
-  height: 52px;
-  margin: 0 0 36px;
-  padding: 12px 0;
-  text-align: center;
+  .form__legend {
+    display: block;
+    margin-top: 17px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .form__submit {
+    width: 100%;
+    height: 52px;
+    margin: 0 0 36px;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+      width: 20%;
+    }
+
+    textarea {
+      font-size: 18px;
+      width: 70%;
+      margin: 12px 0 53px auto;
+    }
+
+    .form__legend {
+      font-size: 17px;
+      order: 4;
+      margin-left: auto;
+    }
+
+    .form__submit {
+      width: 230px;
+      order: 3;
+    }
+  }
 }

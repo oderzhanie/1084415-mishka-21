@@ -54,8 +54,8 @@
         <p class="form__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
         <fieldset class="form__fieldset form__fieldset--type">
-          <legend class="form__subtitle">Тип</legend>
           <div class="form__inputs-wrapper form__inputs-wrapper--type">
+            <h2 class="form__subtitle">Тип</h2>
             <p>
               <input type="radio" name="type" id="type-1" value="accessoire" checked>
               <label for="type-1">Аксессуар для интерьера</label>
@@ -68,8 +68,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--colors">
-          <legend class="form__subtitle">Цвет</legend>
           <div class="form__inputs-wrapper form__inputs-wrapper--colors">
+            <h2 class="form__subtitle">Цвет</h2>
             <p>
               <input type="checkbox" name="color" id="color-1" value="white" checked>
               <label for="color-1">Белый</label>
@@ -98,8 +98,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--username">
-          <legend class="form__subtitle">ФИО</legend>
           <div class="form__inputs-wrapper form__inputs-wrapper--username">
+            <h2 class="form__subtitle">ФИО</h2>
             <p>
               <label for="first-name">Имя:</label>
               <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
@@ -116,8 +116,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--phone">
-          <legend class="form__subtitle">ТЕЛ</legend>
           <div class="form__inputs-wrapper form__inputs-wrapper--phone">
+            <h2 class="form__subtitle">ТЕЛ</h2>
             <p>
               <input type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" required>
             </p>
@@ -125,8 +125,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--email">
-          <legend class="form__subtitle">E-MAIL</legend>
           <div class="form__inputs-wrapper form__inputs-wrapper--email">
+            <h2 class="form__subtitle">E-MAIL</h2>
             <p>
               <input type="email" name="email" id="email" placeholder="Ваш Email*" required>
             </p>
@@ -134,10 +134,10 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--requirements">
-          <legend class="form__subtitle">ДОП</legend>
           <div class="form__inputs-wrapper form__inputs-wrapper--requirements">
+            <h2 class="form__subtitle">ДОП</h2>
             <textarea placeholder="Опишите все ваши пожелания к заказу" id="requirements" cols="30" rows="10"></textarea>
-            <small class="form__legend form__legend--bottom">
+            <small class="form__legend">
               <sup>*</sup>Поля обязательны для заполнения
             </small>
             <input type="submit" class="form__submit button" value="Отправить заказ" formaction="https://echo.htmlacademy.ru">
