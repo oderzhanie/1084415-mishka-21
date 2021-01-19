@@ -1,5 +1,4 @@
 .page-catalog {
-  width: 100%;
   margin: 0;
   .outline();
 }
@@ -10,9 +9,49 @@
   box-sizing: border-box;
   text-align: center;
   background-color: @bg-grey;
+
+  @media (min-width: @tablet-width) {
+    min-height: 238px;
+    margin-top: -80px;
+    border-top: 1px solid @borders-gray;
+    padding-bottom: 0;
+    margin-bottom: 67px;
+
+    &::after {
+      content: "";
+      position: relative;
+      display: block;
+      left: 0;
+      bottom: -45px; // Почему здесь пришлось задавать отрицательную величину, а ноль не сработал?
+      height: 24px;
+      background-image: url("../../img/form/zigzag-fill-tablet.svg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 255px;
+
+    &::after {
+      height: 34px;
+      bottom: -30px;
+      background-image: url("../../img/catalog/zigzag-fill-desktop.svg.svg");
+    }
+  }
+
   .outline();
 }
 
 .page-catalog__title {
   .main-title();
+
+  @media (min-width: @tablet-width) {
+    margin-top: 50px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

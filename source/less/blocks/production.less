@@ -1,10 +1,25 @@
 .production {
-  display: flex;
-  flex-direction: column;
   margin: 30px 20px 58px;
   padding: 21px 0 33px;
-  border-bottom: 1px solid lightgray;
-  border-top: 1px solid lightgray;
+  border: 1px solid @borders-gray;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: max-content;
+    grid-template-areas:
+      "a b"
+      "a c"
+      "a d";
+
+    padding-bottom: 0;
+  }
 
   .outline();
 }
@@ -13,6 +28,24 @@
   position: relative;
   font-size: 17px;
   margin: 22px 5px 27px 91px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: -2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: b;
+    margin: 96px 57px 0 79px;
+
+    br {
+      display: inline-block;
+    }
+  }
+
   .outline();
 }
 
@@ -26,15 +59,28 @@
   background-image: url("../../img/production/video.svg.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+    top: -50px;
+  }
 }
 
 .production__video {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    order: -3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: a;
+  }
+}
+
+.production__img {
   width: 100%;
-  min-height: 150px;
-  background-image: url("../../img/production/video-mobile1.png");
-  background-position: center;
-  background-size: cover;
+  height: auto;
 }
 
 .production__video::after {
@@ -43,7 +89,7 @@
   width: 32%;
   min-height: 77px;
   left: 35%;
-  top: 25%;
+  top: 35%;
   background-image: url("../../img/production/play.svg.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -54,6 +100,18 @@
   font-size: 13px;
   font-weight: 24px;
   margin: 35px 0 41px 34px;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+    margin: 35px 34px 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: c;
+    margin: 28px 57px 0 79px;
+    font-size: 15px;
+    font-weight: 30px;
+  }
 }
 
 .production__order {
@@ -61,4 +119,13 @@
   margin: 0 34px 0;
   padding: 12px 0;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: d;
+    margin: auto 57px 60px 79px;
+  }
 }
