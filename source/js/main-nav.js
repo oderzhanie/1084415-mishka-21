@@ -5,7 +5,7 @@ const mainNavWrapper = document.querySelector(`.main-nav__wrapper`);
 mainNavWrapper.classList.add(`visually-hidden`);
 menuButton.classList.remove(`visually-hidden`);
 
-buttonClickHandler = () => {
+const buttonClickHandler = () => {
   mainNavWrapper.classList.toggle(`visually-hidden`);
 
   if (menuButton.classList.contains(`main-nav__toggle--open`)) {
@@ -18,5 +18,4 @@ buttonClickHandler = () => {
     menuButtonText.textContent = `Открыть меню`;
   }
 }
-
 menuButton.addEventListener(`click`, buttonClickHandler);
