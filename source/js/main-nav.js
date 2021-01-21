@@ -1,9 +1,7 @@
+const TABLET_WIDTH = 768;
 const menuButton = document.querySelector(`.main-nav__toggle`);
 const menuButtonText = menuButton.querySelector(`span`);
 const mainNavWrapper = document.querySelector(`.main-nav__wrapper`);
-
-mainNavWrapper.classList.add(`visually-hidden`);
-menuButton.classList.remove(`visually-hidden`);
 
 const buttonClickHandler = () => {
   mainNavWrapper.classList.toggle(`visually-hidden`);
@@ -18,4 +16,10 @@ const buttonClickHandler = () => {
     menuButtonText.textContent = `Открыть меню`;
   }
 }
-menuButton.addEventListener(`click`, buttonClickHandler);
+
+if (window.innerWidth < TABLET_WIDTH) {
+  mainNavWrapper.classList.add(`visually-hidden`);
+  menuButton.classList.remove(`visually-hidden`);
+
+  menuButton.addEventListener(`click`, buttonClickHandler);
+}
