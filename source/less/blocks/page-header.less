@@ -1,6 +1,11 @@
 .page-header {
   position: relative;
+  min-height: 79px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    min-height: 89px;
+  }
 
   .outline();
 }
@@ -17,6 +22,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 5px;
     left: 45%;
   }
 
@@ -30,6 +36,11 @@
   @media (min-width: @tablet-width) {
     width: 112px;
     height: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 149px;
+    height: 72px;
   }
 
   .outline();

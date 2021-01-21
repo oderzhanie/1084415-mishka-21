@@ -52,7 +52,11 @@
       <section class="products-catalog">
         <ul class="products-catalog__list">
           <li class="products-catalog__item product-card">
-            <img class="product-card__image" src="./img/catalog/photo-1-mobile 1.png" alt="Игрушка «Зайчик»">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/catalog/photo-1-desktop-1@1x.png 1x, img/catalog/photo-1-desktop-1@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/photo-1-tablet-1@1x.png 1x, img/catalog/photo-1-tablet-1@2x.png 2x">
+              <img class="product-card__image" src="img/catalog/photo-1-mobile-1@1x.png" srcset="img/catalog/photo-1-mobile-1@2x.png 2x" alt="Игрушка «Зайчик»">
+            </picture>
             <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
             <p class="product-card__description">Рост 30 см, вес 200 г</p>
             <div class="product-card__wrapper">
@@ -62,7 +66,11 @@
           </li>
 
           <li class="products-catalog__item product-card">
-            <img class="product-card__image" src="./img/catalog/photo-2-mobile 1.png" alt="Корзинка для белья">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/catalog/photo-2-desktop-1@1x.png 1x, img/catalog/photo-2-desktop-1@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/photo-2-tablet-1@1x.png 1x, img/catalog/photo-2-tablet-1@2x.png 2x">
+              <img class="product-card__image" src="img/catalog/photo-2-mobile-1@1x.png" srcset="img/catalog/photo-2-mobile-1@2x.png 2x" alt="Корзинка для белья">
+            </picture>
             <h3 class="product-card__title">Корзинка для белья</h3>
             <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
             <div class="product-card__wrapper">
@@ -70,8 +78,13 @@
               <a class="product-card__add button" type="button"><span class="visually-hidden">Добавить в корзину</span></a>
             </div>
           </li>
+
           <li class="products-catalog__item product-card">
-            <img class="product-card__image" src="./img/catalog/photo-3-mobile 1.png" alt="Большая корзинка для игрушек">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/catalog/photo-3-desktop-1@1x.png 1x, img/catalog/photo-3-desktop-1@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/photo-3-tablet-1@1x.png 1x, img/catalog/photo-3-tablet-1@2x.png 2x">
+              <img class="product-card__image" src="img/catalog/photo-3-mobile-1@1x.png" srcset="img/catalog/photo-3-mobile-1@2x.png 2x" alt="Большая корзинка для игрушек">
+            </picture>
             <h3 class="product-card__title">Большая корзинка для игрушек</h3>
             <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
             <div class="product-card__wrapper">
@@ -85,7 +98,11 @@
       <section class="production">
         <h2 class="production__title">Процесс <br>производства</h2>
         <div class="production__video" id="production-video" title="Как устроено наше производство">
-          <img class="production__img" src="img/production/video-mobile1.png">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/catalog/video-desktop-1@1x.png 1x, img/catalog/video-desktop-1@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/video-tablet-1@1x.png 1x, img/catalog/video-tablet-1@2x.png 2x">
+            <img class="production__img" src="img/production/video-mobile-1@1x.png" srcset="img/production/video-mobile-1@2x.png 2x" width="260" height="150">
+          </picture>
         </div>
         <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a href="form.html" class="production__order button">Сделать заказ</a>
