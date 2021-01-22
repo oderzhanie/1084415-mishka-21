@@ -39,7 +39,7 @@
   @media (min-width: @tablet-width) {
     padding: 58px 50px 0;
 
-    background-image: url("../../img/reviews/review-2.png");
+    background-image: url("../../img/reviews/review-tablet-1@1x.png");
     background-size: 350px 457px;
     background-position: left;
     background-repeat: no-repeat;
@@ -50,13 +50,21 @@
       "a b"
       "c c"
       "d e";
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/reviews/review-tablet-1@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 50px;
     padding-left: 174px;
 
-    background-image: url("../../img/reviews/review-1.png");
+    background-image: url("../../img/reviews/review-desktop-1@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/reviews/review-desktop-1@2x.png");
+    }
   }
 
   .outline();
