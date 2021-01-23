@@ -35,19 +35,19 @@
   display: block;
   width: 28px;
   height: 28px;
+  text-align: center;
+  color: #000000;
 
-  background-repeat: no-repeat;
-  background-position: center;
+  &:hover {
+    color: @aquamarin-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.social__link--instagram {
-  background-image: url("../../img/social/insta.svg.svg");
-}
-
-.social__link--facebook {
-  background-image: url("../../img/social/fb.svg.svg");
-}
-
-.social__link--twitter {
-  background-image: url("../../img/social/twitter.svg.svg");
+.social__link--instagram,
+.social__link--twitter .social__img {
+  margin-top: 3px;
 }
