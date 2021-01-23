@@ -145,19 +145,20 @@
   @media (min-width: @tablet-width) {
     border: none;
   }
-}
 
-.reviews__arrow--prev {
+  &:hover {
+    .reviews__arrow-svg {
+      opacity: 0.6;
+    }
+  }
 
-  background-image: url("../../img/reviews/huge-arrow-left.svg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  &:active {
+    .reviews__arrow-svg {
+      opacity: 0.3;
+    }
+  }
 
-.reviews__arrow--next {
-  background-image: url("../../img/reviews/huge-arrow-right.svg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  .outline();
 }
 
 .reviews__send {
