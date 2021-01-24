@@ -29,7 +29,7 @@
 
   @media (min-width: @desktop-width) {
     height: 23px;
-    background-image: url("../../img/featured-product/zigzag-line-desktop.svg.svg");
+    background-image: url("../../img/featured-product/zigzag-line-desktop.svg");
   }
 }
 
@@ -130,6 +130,7 @@
     grid-area: c;
     width: 80%;
     margin-top: -10px;
+    height: min-content;
   }
 
   @media (min-width: @desktop-width) {
@@ -139,7 +140,8 @@
 
 .featured-product__descriptor {
   margin: 0;
-  height: 39px;
+  // height: 39px;
+  height: max-content;
 
   font-size: 15px;
   line-height: 39px;
@@ -187,12 +189,20 @@
   grid-area: f;
   align-self: start;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .featured-product__descriptor--value-7 {
   grid-area: k;
   align-self: start;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .featured-product__image {
@@ -222,7 +232,7 @@
   @media (min-width: @tablet-width) {
     grid-area: e;
     width: 80%;
-    margin-top: 57px;
+    // margin-top: 57px;
     margin-bottom: 0;
 
     font-size: 20px;
@@ -246,7 +256,7 @@
   @media (min-width: @tablet-width) {
     grid-area: f;
     width: 80%;
-    margin: 33px auto -23px 0;
+    margin: 33px auto 0 0;
   }
 
   @media (min-width: @desktop-width) {

@@ -98,15 +98,22 @@
 
 .contacts__text--email {
   grid-area: c;
-  text-decoration-color: #62d1ba;
   color: #000000;
+  text-decoration: none;
 
   &:hover {
     color: @aquamarin-hover;
   }
 
   &:active {
-    text-decoration-color: hsla(171, 50%, 52%, 0.1);
+    span {
+      border-bottom: 2px solid hsla(171, 50%, 52%, 0.1);
+    }
+  }
+
+  span {
+    padding-bottom: 5px;
+    border-bottom: 2px solid @aquamarin;
   }
 }
 
