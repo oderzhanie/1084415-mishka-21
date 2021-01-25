@@ -134,8 +134,16 @@
 }
 
 .site-list__item:nth-of-type(8) .site-list__link {
+  @media (min-width: @tablet-width) {
+    font-weight: normal;
+  }
+
   @media (min-width: @desktop-width) {
+    min-height: 68px;
+    line-height: 68px;
+    padding-top: 0;
     margin-left: 15px;
+    font-size: 15px;
   }
 }
 
@@ -191,19 +199,6 @@
 .site-list__item:nth-of-type(5) .site-list__link {
   @media (min-width: @desktop-width) {
     margin-left: 10px;
-  }
-}
-
-.site-list__item:nth-of-type(8) .site-list__link {
-  @media (min-width: @tablet-width) {
-    font-weight: normal;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 68px;
-    line-height: 68px;
-    padding-top: 0;
-    font-size: 15px;
   }
 }
 
