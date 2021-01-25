@@ -86,7 +86,7 @@ function initMap() {
       center: coordinates,
       zoom: 15,
       disableDefaultUI: true,
-      scrollwheel: true
+      scrollwheel: false
   });
 
   image = "../img/contacts/map-pin.svg.svg",
