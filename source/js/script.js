@@ -70,3 +70,29 @@ const addButtons = document.querySelectorAll(`.product-card__add`);
 for (let button of addButtons) {
   button.addEventListener(`click`, orderHandler);
 };
+
+
+// Карта
+const mapPicture = document.querySelector(`.map picture`);
+const mapPin = document.querySelector(`.map__pin`);
+
+mapPicture.classList.add(`visually-hidden`);
+mapPin.classList.add(`visually-hidden`);
+
+function initMap() {
+  const coordinates = {lat: 59.938856214761074, lng: 30.323036669409305},
+
+  map = new google.maps.Map(document.querySelector('.google-map'), {
+      center: coordinates,
+      zoom: 15,
+      disableDefaultUI: true,
+      scrollwheel: true
+  });
+
+  image = "../img/contacts/map-pin.svg.svg",
+  marker = new google.maps.Marker({
+    position: coordinates,
+    map: map,
+    icon: image
+});
+}

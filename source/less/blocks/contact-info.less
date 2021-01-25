@@ -14,6 +14,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 457px;
+    margin: 0 50px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-areas:
@@ -155,6 +156,20 @@
   position: absolute; // Как точно закрепить пин в нужной точке карты
   top: 30%;
   left: 45%;
+}
+
+.google-map {
+  height: 454px;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // width: 46%;
+  }
 }
 
 .contact-info__message {
