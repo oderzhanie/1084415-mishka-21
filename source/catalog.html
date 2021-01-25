@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Мишка: магазин товаров ручной работы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <svg style="display: none;">
@@ -231,11 +231,11 @@
           <picture>
             <source media="(min-width: 1150px)" srcset="img/production/video-desktop-1@1x.png 1x, img/production/video-desktop-1@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/production/video-tablet-1@1x.png 1x, img/production/video-tablet-1@2x.png 2x">
-            <img class="production__img" src="img/production/video-mobile-1@1x.png" srcset="img/production/video-mobile-1@2x.png 2x" width="260" height="150">
-            <svg class="production__play-button" width="101" height="77" aria-label="Начать проигрывать видео">
-              <use xlink:href="#video-play"></use>
-            </svg>
+            <img class="production__img" src="img/production/video-mobile-1@1x.png" srcset="img/production/video-mobile-1@2x.png 2x" width="260" height="150" alt="Наше производство">
           </picture>
+          <svg class="production__play-button" width="101" height="77" aria-label="Начать проигрывать видео">
+            <use xlink:href="#video-play"></use>
+          </svg>
         </div>
         <div class="production__details">
           <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -248,7 +248,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a href="./index.html" class="page-footer__logo">
-          <svg class="page-footer__logo-image" width="102" height="34" alt="Магазин Мишка">
+          <svg class="page-footer__logo-image" width="102" height="34" aria-label="Магазин Мишка">
             <use xlink:href="#footer-logo"></use>
           </svg>
         </a>
@@ -257,21 +257,21 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#">
-                <svg class="social__img" width="22" height="22" alt="Магазин Мишка в Инстаграме">
+                <svg class="social__img" width="22" height="22" aria-label="Магазин Мишка в Инстаграме">
                   <use xlink:href="#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <svg class="social__img" width="15" height="28" alt="Магазин Мишка в Фейсбуке">
+                <svg class="social__img" width="15" height="28" aria-label="Магазин Мишка в Фейсбуке">
                   <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#">
-                <svg class="social__img" width="23" height="20" alt="Магазин Мишка в Твиттере">
+                <svg class="social__img" width="23" height="20" aria-label="Магазин Мишка в Твиттере">
                   <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
@@ -302,8 +302,6 @@
       <button class="add-cart__button button">Добавить</button>
     </section>
 
-    <!-- <script src="./js/main-nav.js"></script>
-    <script src="./js/add-cart-catalog.js"></script> -->
     <script src="./js/script.min.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Мишка: магазин товаров ручной работы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <svg style="display: none;">
@@ -183,13 +183,13 @@
           <h2 class="featured-product__title">Вязаные корзинки</h2>
           <h3 class="featured-product__subtitle">Товар недели</h3>
           <ul class="featured-product__description">
-            <p class="featured-product__descriptor featured-product__descriptor--value-1">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</p>
-            <p class="featured-product__descriptor featured-product__descriptor--value-2">Цвет:</p>
-            <p class="featured-product__descriptor featured-product__descriptor--value-3">«Тиффани»/серый</p>
-            <p class="featured-product__descriptor featured-product__descriptor--value-4">Диаметр:</p>
-            <p class="featured-product__descriptor featured-product__descriptor--value-5">25 см</p>
-            <p class="featured-product__descriptor featured-product__descriptor--value-6">Высота:</p>
-            <p class="featured-product__descriptor featured-product__descriptor--value-7">15 см</p>
+            <li class="featured-product__descriptor featured-product__descriptor--value-1">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех размерах.</li>
+            <li class="featured-product__descriptor featured-product__descriptor--value-2">Цвет:</li>
+            <li class="featured-product__descriptor featured-product__descriptor--value-3">«Тиффани»/серый</li>
+            <li class="featured-product__descriptor featured-product__descriptor--value-4">Диаметр:</li>
+            <li class="featured-product__descriptor featured-product__descriptor--value-5">25 см</li>
+            <li class="featured-product__descriptor featured-product__descriptor--value-6">Высота:</li>
+            <li class="featured-product__descriptor featured-product__descriptor--value-7">15 см</li>
           </ul>
 
           <picture>
@@ -243,25 +243,30 @@
 
       <section class="contact-info">
         <div class="contact-info__wrapper">
-          <article class="contacts">
+          <div class="contacts">
             <h2 class="contacts__title">Контакты</h2>
             <p class="contacts__text">e-mail: </p>
             <a class="contacts__text contacts__text--email" href="mailto:info@mimimishkashop.ru"><span>info@mimimishkashop.ru</span></a>
-            <p class="contacts__text">адрес: <address class="contacts__text contacts__text--address"> г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д. 19/8, офис 101</address></p>
-          </article>
+            <p class="contacts__text">адрес: </p>
+            <p class="contacts__text contacts__text--address"> г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д. 19/8, офис 101</p>
+          </div>
 
-          <article class="map">
+          <div class="map">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/contacts/map-desktop-1@1x.png 1x, img/contacts/map-desktop-1@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/contacts/map-tablet-1@1x.png 1x, img/contacts/map-tablet-1@2x.png 2x">
               <img class="map__img" src="img/contacts/map-mobile-1@1x.png" srcset="img/contacts/map-mobile-1@2x.png 2x" alt="Как нас найти">
             </picture>
+            <!-- <div class="mapouter">
+              <iframe width="768" height="457" src="https://maps.google.com/maps?q=%D0%B3.%20%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,%20%D1%83%D0%BB.%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F,%20%D0%B4.%2019/8&t=&z=13&ie=UTF8&iwloc=&output=embed">
+              </iframe>
+            </div> -->
             <img class="map__pin" src="img/contacts/map-pin.svg.svg" width="67" height="100" alt="Мы на карте">
-          </article>
+            </div>
 
-          <article>
+          <div>
             <a href="#" class="contact-info__message button"><span>Напишите нам</span></a>
-          </article>
+          </div>
         </div>
       </section>
     </main>
@@ -269,7 +274,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a href="./index.html" class="page-footer__logo">
-          <svg class="page-footer__logo-image" width="102" height="34" alt="Магазин Мишка">
+          <svg class="page-footer__logo-image" width="102" height="34" aria-label="Магазин Мишка">
             <use xlink:href="#footer-logo"></use>
           </svg>
         </a>
@@ -278,21 +283,21 @@
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#">
-                <svg class="social__img" width="22" height="22" alt="Магазин Мишка в Инстаграме">
+                <svg class="social__img" width="22" height="22" aria-label="Магазин Мишка в Инстаграме">
                   <use xlink:href="#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <svg class="social__img" width="15" height="28" alt="Магазин Мишка в Фейсбуке">
+                <svg class="social__img" width="15" height="28" aria-label="Магазин Мишка в Фейсбуке">
                   <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#">
-                <svg class="social__img" width="23" height="20" alt="Магазин Мишка в Твиттере">
+                <svg class="social__img" width="23" height="20" aria-label="Магазин Мишка в Твиттере">
                   <use xlink:href="#icon-twitter"></use>
                 </svg>
               </a>
@@ -323,8 +328,6 @@
       <button class="add-cart__button button">Добавить</button>
     </section>
 
-    <!-- <script src="./js/main-nav.js"></script>
-    <script src="./js/add-cart-index.js"></script> -->
     <script src="./js/script.min.js"></script>
   </body>
 </html>
