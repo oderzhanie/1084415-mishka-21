@@ -84,7 +84,7 @@ function initMap() {
 
   map = new google.maps.Map(document.querySelector('.google-map'), {
       center: coordinates,
-      zoom: 15,
+      zoom: 16,
       disableDefaultUI: true,
       scrollwheel: false
   });

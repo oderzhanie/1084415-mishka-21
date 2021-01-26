@@ -37,14 +37,13 @@
     box-sizing: border-box;
     height: max-content;
     margin: 0;
-    padding: 27px;
+    padding: 19px 27px 24px;
 
     &:hover {
       box-shadow: 3px 7px 5px rgba(236, 236, 236, 0.8), -3px 0 5px rgba(236, 236, 236, 0.8);
     }
   }
 }
-
 
 .product-card__title {
   margin: 0;
@@ -84,6 +83,10 @@
     font-size: 15px;
     line-height: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 13px;
+  }
 }
 
 .product-card__price {
@@ -104,8 +107,8 @@
 
 .product-card__icon-cart {
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 4px;
+  right: 6px;
   color: #000000;
   opacity: 0.2;
 
