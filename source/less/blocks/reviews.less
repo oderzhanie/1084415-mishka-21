@@ -10,11 +10,10 @@
 
   @media (min-width: @desktop-width) {
     min-height: 457px;
-    margin-top: 90px;
+    margin-top: 47px;
+    margin-bottom: 71px;
     padding-bottom: 0;
   }
-
-  .outline();
 }
 
 .reviews::after {
@@ -28,7 +27,7 @@
   background-image: url("../../img/featured-product/zigzag-line-desktop.svg");
 
   @media (min-width: @tablet-width) {
-    height: 17px;
+    height: 23px;
   }
 }
 
@@ -57,23 +56,24 @@
   }
 
   @media (min-width: @desktop-width) {
+    grid-template-rows: min-content max-content min-content;
+    min-height: 457px;
     margin: 0 50px;
     padding-left: 174px;
+    padding-right: 0;
 
     background-image: url("../../img/reviews/review-desktop-1@1x.png");
+    background-position: left top;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/reviews/review-desktop-1@2x.png");
     }
   }
-
-  .outline();
 }
 
 .reviews__item {
   margin: 0;
   padding: 0;
-  .outline();
 }
 
 .reviews__item--contacts {
@@ -93,8 +93,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 30px;
+    margin-bottom: 0;
     font-size: 53px;
-    line-height: 57px;
+    line-height: 30px;
   }
 }
 
@@ -107,7 +109,10 @@
     grid-area: c;
     font-size: 17px;
   }
-  .outline();
+
+  @media (min-width: @desktop-width) {
+    margin-top: -5px;
+  }
 }
 
 .reviews__author-name {
@@ -118,10 +123,14 @@
   @media (min-width: @tablet-width) {
     margin-top: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 13px;
+  }
 }
 
 .reviews__author-nickname {
-  line-height: 30px;
+  line-height: 33px;
 }
 
 .reviews__arrows {
@@ -135,6 +144,11 @@
     width: 50%;
     margin: 30px 0 38px auto;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 13px;
+    width: 40%;
+  }
 }
 
 .reviews__arrow {
@@ -145,19 +159,22 @@
   @media (min-width: @tablet-width) {
     border: none;
   }
-}
 
-.reviews__arrow--prev {
+  &:hover {
+    .reviews__arrow-svg {
+      opacity: 0.6;
+    }
+  }
 
-  background-image: url("../../img/reviews/huge-arrow-left.svg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  &:active {
+    .reviews__arrow-svg {
+      opacity: 0.3;
+    }
+  }
 
-.reviews__arrow--next {
-  background-image: url("../../img/reviews/huge-arrow-right.svg.svg");
-  background-position: center;
-  background-repeat: no-repeat;
+  &:focus {
+    outline: none;
+  }
 }
 
 .reviews__send {
@@ -170,5 +187,10 @@
     grid-area: b;
     width: 50%;
     margin: 0 0 45px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 40%;
+    margin-top: 20px;
   }
 }

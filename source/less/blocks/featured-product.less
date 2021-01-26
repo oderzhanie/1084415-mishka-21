@@ -5,10 +5,9 @@
   background-color: white;
   box-sizing: border-box;
   position: relative;
-  .outline();
 
   @media (min-width: @desktop-width) {
-    margin-top: 54px;
+    margin-top: 4px;
     padding: 0 50px;
   }
 }
@@ -29,7 +28,7 @@
 
   @media (min-width: @desktop-width) {
     height: 23px;
-    background-image: url("../../img/featured-product/zigzag-line-desktop.svg.svg");
+    background-image: url("../../img/featured-product/zigzag-line-desktop.svg");
   }
 }
 
@@ -77,11 +76,11 @@
 
   @media (min-width: @desktop-width) {
     grid-area: b;
-    margin-top: 30px;
+    margin-top: 63px;
+    margin-left: 18px;
     font-size: 53px;
     line-height: 57px;
     min-width: max-content;
-    // max-width: 500px; // Не получается ограничить максимальную ширину надписи
     z-index: 10;
   }
 }
@@ -103,14 +102,13 @@
 
   @media (min-width: @desktop-width) {
     grid-area: a;
-    margin-left: 0;
-    margin-top: 35px;
+    margin-left: 31px;
+    margin-top: 67px;
   }
 }
 
 .featured-product__description {
   .list-reset();
-  .outline();
 
   display: grid;
   grid-template-columns: 40% 60%;
@@ -130,6 +128,7 @@
     grid-area: c;
     width: 80%;
     margin-top: -10px;
+    height: min-content;
   }
 
   @media (min-width: @desktop-width) {
@@ -139,7 +138,8 @@
 
 .featured-product__descriptor {
   margin: 0;
-  height: 39px;
+  // height: 39px;
+  height: max-content;
 
   font-size: 15px;
   line-height: 39px;
@@ -187,12 +187,20 @@
   grid-area: f;
   align-self: start;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .featured-product__descriptor--value-7 {
   grid-area: k;
   align-self: start;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .featured-product__image {
@@ -222,7 +230,6 @@
   @media (min-width: @tablet-width) {
     grid-area: e;
     width: 80%;
-    margin-top: 57px;
     margin-bottom: 0;
 
     font-size: 20px;
@@ -232,8 +239,6 @@
   @media (min-width: @desktop-width) {
     margin-top: 27px;
   }
-
-  .outline();
 }
 
 .featured-product__order {
@@ -246,7 +251,7 @@
   @media (min-width: @tablet-width) {
     grid-area: f;
     width: 80%;
-    margin: 33px auto -23px 0;
+    margin: 33px auto 0 0;
   }
 
   @media (min-width: @desktop-width) {

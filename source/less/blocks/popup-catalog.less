@@ -45,7 +45,7 @@
   }
 }
 
-.add-cart__wrapper .add-cart__size {
+.add-cart__size {
   width: 30%;
   height: 52px;
 
@@ -54,9 +54,21 @@
   line-height: 17px;
 
   background-color: #ffffff;
-  border: 2px solid @borders-gray;
+  border: 2px solid rgba(68, 68, 68, 0.1);
 
-  &--active {
-    border: 2px solid @seafoam-blue;
+  &:hover {
+    border-color: rgba(68, 68, 68, 0.3);
   }
+
+  &:active {
+    border-color: @seafoam-blue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.add-cart__size--active {
+  border-color: @seafoam-blue;
 }

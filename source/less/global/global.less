@@ -1,4 +1,5 @@
 html {
+  width: 100%;
   font-size: 17px;
   font-family: "Open Sans", sans-serif;
   line-height: 24px;
@@ -6,7 +7,7 @@ html {
 
 body {
   min-width: 320px;
-  // max-width: 1280px;
+  max-width: @desktop-width;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: center;
@@ -48,15 +49,22 @@ p {
 
   border: 2px solid #444444;
   background-color: transparent;
+
+  &:hover {
+    color: #f1f1f1;
+    background-color: #444444;
+  }
+
+  &:active {
+    span {
+      opacity: 0.3;
+    }
+  }
 }
 
 table {
   border-spacing: 0;
   border-collapse: collapse;
-}
-
-.outline {
-  outline: 1px solid blue;
 }
 
 .visually-hidden {

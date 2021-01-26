@@ -2,7 +2,10 @@
   width: 100%;
   margin: 0;
   box-sizing: border-box;
-  .outline();
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .contact-info__wrapper {
@@ -15,13 +18,13 @@
 
   @media (min-width: @desktop-width) {
     min-height: 457px;
+    margin: 0 50px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 55%;
     grid-template-areas:
       "a b"
       "c b";
   }
-  .outline();
 }
 
 .contacts {
@@ -44,12 +47,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 35% 55%;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: min-content;
     grid-template-areas:
       "a a"
       "b c"
       "d e"
       "f f";
+
+    padding-left: 0;
+    padding-right: 20px;
   }
 }
 
@@ -76,30 +83,46 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 100px;
+    padding-left: 125px;
+    margin-bottom: 36px;
     font-size: 53px;
     line-height: 57px;
 
     &::after {
-      left: 0;
+      left: 14px;
+      bottom: -3px;
     }
   }
-
-  .outline();
 }
 
 .contacts p:first-of-type {
   grid-area: b;
 
   @media (min-width: @desktop-width) {
-    padding-left: 100px;
+    text-align: right;
+    padding-right: 23px;
   }
 }
 
 .contacts__text--email {
   grid-area: c;
-  text-decoration-color: #62d1ba;
   color: #000000;
+  text-decoration: none;
+
+  &:hover {
+    color: @aquamarin-hover;
+  }
+
+  &:active {
+    span {
+      border-bottom: 2px solid hsla(171, 50%, 52%, 0.1);
+    }
+  }
+
+  span {
+    padding-bottom: 5px;
+    border-bottom: 2px solid @aquamarin;
+  }
 }
 
 .contacts p:nth-of-type(2) {
@@ -107,12 +130,19 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 100px;
+    text-align: right;
+    padding-right: 24px;
+    padding-top: 28px;
   }
 }
 
 .contacts__text--address {
   grid-area: e;
   font-style: normal;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 28px;
+  }
 }
 
 .contacts__text {
@@ -123,8 +153,6 @@
   @media (min-width: @tablet-width) {
     font-size: 17px;
   }
-
-  .outline();
 }
 
 .map {
@@ -135,8 +163,6 @@
     grid-area: b;
     margin-bottom: 0;
   }
-
-  .outline();
 }
 
 .map__img {
@@ -148,6 +174,20 @@
   position: absolute; // Как точно закрепить пин в нужной точке карты
   top: 30%;
   left: 45%;
+}
+
+.google-map {
+  height: 454px;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 92%;
+  }
 }
 
 .contact-info__message {
@@ -162,5 +202,8 @@
 
   @media (min-width: @desktop-width) {
     grid-area: c;
+    width: 48%;
+    margin-top: 24px;
+    margin-left: 27%;
   }
 }
